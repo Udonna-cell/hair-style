@@ -1,0 +1,30 @@
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: rgba(255, 255, 255, 1);
+  font-family: "Urbanist", serif;
+}
+.logo {
+  width: 169.51px;
+  height: 28px;
+}
+
+.menu > ul {
+  display: flex;
+  list-style: none;
+  /* gap: 10px; */
+}
+.menu > ul > li {
+    padding: 16px 25px;
+    text-transform: capitalize;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    font-weight: 500;
+}
+.active {
+    background: rgba(255, 255, 255, 1);
+    color: rgba(0, 0, 0, 1);
+    border-radius: 12px;
+}
