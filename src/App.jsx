@@ -2,6 +2,7 @@
 import scissor from "./assets/scissors.svg";
 import calendar from "./assets/calendar_svgrepo.com.svg";
 import services from "./assets/services_svgrepo.com.svg";
+import arrow from "./assets/arrow.svg";
 // import viteLogo from '/vite.svg'
 import "./App.css";
 import Nav from "./components/Nav/Nav";
@@ -14,6 +15,9 @@ function App() {
         <article>
           <aside>
             <p>Where Every Cut Tells Your Story</p>
+            <div>
+              <img src={arrow} alt="arrow icon" />
+            </div>
           </aside>
           <h1>
             Look <span>Good</span>.

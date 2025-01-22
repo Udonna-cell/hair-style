@@ -18,11 +18,17 @@
 .menu > ul > li {
     padding: 16px 25px;
     text-transform: capitalize;
-    display: flex;
     align-items: center;
     cursor: pointer;
     font-weight: 500;
 }
+
+.menu > ul > li > p {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
 .active {
     background: rgba(255, 255, 255, 1);
     color: rgba(0, 0, 0, 1);
