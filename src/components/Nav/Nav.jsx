@@ -1,18 +1,33 @@
+import { useState } from "react";
 import styles from "./Nav.module.css";
 import logo from "./assets/logo.svg";
 
 function Nav() {
+  let [isOpen, setIsOpen] = useState(true);
+  const close = ()=>{
+    setIsOpen(!isOpen)
+  }
   return (
     <nav className={styles.nav}>
       <div className={styles.logo}>
         <img src={logo} alt="logo icon" />
       </div>
-      <menu className={styles.menu}>
+      {isOpen ? (
+        <div className={styles.bars} onClick={()=> close()}>
+          <div></div>
+        </div>
+      ) : (
+        <div className={styles.close} onClick={()=> close()}>
+          <div></div>
+        </div>
+      )}
+      {isOpen? false : <menu className={styles.menu}>
         <ul>
           <li className={styles.active}>Home</li>
           <li>
-            <p>About us <span className="maker"></span></p>
-            
+            <p>
+              About us <span className="maker"></span>
+            </p>
           </li>
           <li>
             <p>
@@ -30,7 +45,7 @@ function Nav() {
             </p>
           </li>
         </ul>
-      </menu>
+      </menu>}
     </nav>
   );
 }
